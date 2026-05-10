@@ -601,13 +601,13 @@ def main():
         for l in log_lines:
             print(l)
 
-        log_path = os.path.join(OUTPUT_DIR, 'sensor_log.txt')
+        log_path = os.path.join(OUTPUT_DIR, 'mc_sensor_log.txt')
         with open(log_path, 'w', encoding='utf-8') as f:
             f.write('\n'.join(log_lines) + '\n')
         print(f"\nLog saved: {log_path}")
 
         # ── RAW SENSOR DATA OUTPUT ─────────────────────────────────────────
-        raw_path = os.path.join(OUTPUT_DIR, 'sensor_raw.txt')
+        raw_path = os.path.join(OUTPUT_DIR, 'mc_sensor_raw.txt')
         with open(raw_path, 'w', encoding='utf-8') as f:
             f.write("RAW FORWARD RADAR (departure window only)\n" + "-" * 40 + "\n")
             dep_fwd = [e for e in fwd_log if e['t_rel'] and e['t_rel'] >= dep_t]
