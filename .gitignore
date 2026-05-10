@@ -1,0 +1,80 @@
+# ── Python ──────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+
+# ── Virtual environments ─────────────────────────────────────
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ── CARLA specific ───────────────────────────────────────────
+# CARLA egg — install locally, do not commit
+*.egg
+carla-*.egg
+
+# CARLA output directories — raw simulation runs
+s3_*/
+s4_*/
+mc_output_*/
+mc_counterfactual_output*/
+
+# ── Jupyter ──────────────────────────────────────────────────
+.ipynb_checkpoints
+*.ipynb
+
+# ── Data outputs — keep CSVs in data/outputs/ only ──────────
+# Exclude bulk raw frame directories (too large for GitHub)
+frames/mc/cam_*.png
+frames/car/cam_*.png
+
+# ── OS files ─────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ── IDE / editor ─────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+
+# ── Logs and temp ────────────────────────────────────────────
+*.log
+*.tmp
+*.temp
+.cache/
+
+# ── Large binary outputs ─────────────────────────────────────
+# Keep only selected figures in figures/ — exclude bulk outputs
+*.avi
+*.mp4
+*.mov
