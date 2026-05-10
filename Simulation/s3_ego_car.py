@@ -44,7 +44,7 @@ import cv2
 
 
 # ── CONFIGURATION ──────────────────────────────────────────────────────────
-OUTPUT_DIR = 's3_ego_mc_output'
+OUTPUT_DIR = 's3_ego_car_output'
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # Speed parameters — both vehicles travel at highway speed
@@ -600,13 +600,13 @@ def main():
         for l in log_lines:
             print(l)
 
-        log_path = os.path.join(OUTPUT_DIR, 'sensor_log.txt')
+        log_path = os.path.join(OUTPUT_DIR, 'car_sensor_log.txt')
         with open(log_path, 'w', encoding='utf-8') as f:
             f.write('\n'.join(log_lines) + '\n')
         print(f"\nLog saved: {log_path}")
 
         # ── RAW SENSOR DATA OUTPUT ─────────────────────────────────────────
-        raw_path = os.path.join(OUTPUT_DIR, 'sensor_raw.txt')
+        raw_path = os.path.join(OUTPUT_DIR, 'car_sensor_raw.txt')
         with open(raw_path, 'w', encoding='utf-8') as f:
             f.write("RAW FORWARD RADAR (departure window only)\n" + "-" * 40 + "\n")
             dep_fwd = [e for e in fwd_log if e['t_rel'] and e['t_rel'] >= dep_t]
@@ -753,7 +753,7 @@ SAFETY INDICATORS:
         """)
 
         # ── SAVE MONTE CARLO BASELINE METRICS ──────────────────────────────
-        metrics_csv = os.path.join(OUTPUT_DIR, 'mc_baseline_metrics.csv')
+        metrics_csv = os.path.join(OUTPUT_DIR, 'car_baseline_metrics.csv')
         with open(metrics_csv, 'w') as f:
             f.write("parameter,value\n")
             f.write(f"v_ego_kmh,{SPEED_KMH}\n")
@@ -776,7 +776,7 @@ SAFETY INDICATORS:
         print(f"Baseline metrics saved: {metrics_csv}")
 
         # ── SAVE PER-TICK DATA ─────────────────────────────────────────────
-        ticks_csv = os.path.join(OUTPUT_DIR, 'mc_tick_data.csv')
+        ticks_csv = os.path.join(OUTPUT_DIR, 'car_tick_data.csv')
         with open(ticks_csv, 'w') as f:
             f.write("t,d_lat,d_long,ttc,closing_speed,drift\n")
             for m in metrics_log:
