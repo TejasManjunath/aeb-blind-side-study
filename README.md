@@ -768,7 +768,7 @@ python Simulation/s4_analysis.py
   year      = {2026},
   publisher = {GitHub / Zenodo},
   url       = {https://github.com/TejasManjunath/aeb-blind-side-study},
-  doi       = {(https://doi.org/10.5281/zenodo.20450359)},
+  doi       = {(https://doi.org/10.5281/zenodo.20450358)},
   note      = {Phase 2 of the ADAS Validation Gap Research Series}
 }
 ```
