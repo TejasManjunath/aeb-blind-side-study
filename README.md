@@ -13,7 +13,7 @@
 [![Monte Carlo](https://img.shields.io/badge/Monte%20Carlo-100%2C000%20Scenarios-2ECC71?style=for-the-badge)]()
 [![Multi-Seed Std](https://img.shields.io/badge/Multi--Seed%20Std-0.020%25-27AE60?style=for-the-badge)]()
 [![Baseline](https://img.shields.io/badge/Baseline%20Collision-99.6%25-E74C3C?style=for-the-badge)]()
-[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.XXXXXXX-blue?style=for-the-badge)](https://zenodo.org)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20450358.svg)](https://doi.org/10.5281/zenodo.20450358)
 [![License](https://img.shields.io/badge/License-MIT-E67E22?style=for-the-badge)](LICENSE)
 
 <br>
@@ -768,7 +768,7 @@ python Simulation/s4_analysis.py
   year      = {2026},
   publisher = {GitHub / Zenodo},
   url       = {https://github.com/TejasManjunath/aeb-blind-side-study},
-  doi       = {10.5281/zenodo.XXXXXXX},
+  doi       = {(https://doi.org/10.5281/zenodo.20450359)},
   note      = {Phase 2 of the ADAS Validation Gap Research Series}
 }
 ```
